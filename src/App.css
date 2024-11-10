@@ -1,38 +1,148 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  height: 100vh;
   min-height: 100vh;
+  max-height: 100vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(44, 1, 54, 1) 47%,
+    rgba(64, 1, 80, 1) 100%
+  );
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.background-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../simon-says/public/background.png");
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls {
+  padding: 0vw 20vw;
+  margin-top: -40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  font-size: 2rem;
+}
+
+.title h1 {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.title h1::before,
+.title h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  font-size: 3rem;
+  z-index: -1;
+  display: flex;
+  transform: translateX(-50%);
+}
+
+.title h1::before {
+  color: #fb00fb;
+  top: 2.5px;
+  left: calc(50%);
+}
+
+.title h1::after {
+  color: #00f1f1;
+  top: -2.5px;
+  left: calc(50%);
+}
+
+.tile {
+  width: 12vw;
+  height: 12vw;
+  margin: 0.8vw;
+  border-radius: 15px;
+  border: none;
+}
+
+.tile:hover {
+  width: 12.5vw;
+  height: 12.5vw;
+  margin: 0.3vw 0.5vw;
+  transition: 0.3s;
+}
+
+#tile-1 {
+  background: #fb00fb;
+}
+
+#tile-1:hover, .tile-1-active {
+  background: #ff72ff;
+  box-shadow: 0 0 20px #ff72ff;
+}
+
+#tile-2 {
+  background: #00f1f1;
+}
+
+#tile-2:hover, .tile-2-active {
+  background: #58ffff;
+  box-shadow: 0 0 20px #58ffff;
+}
+
+#tile-3 {
+  background: #b7ff5a;
+}
+
+#tile-3:hover, .tile-3-active {
+  background: #ccff8a;
+  box-shadow: 0 0 20px #ccff8a;
+}
+
+#tile-4 {
+  background: #ff4444;
+}
+
+#tile-4:hover, .tile-4-active {
+  background: #fc5a5a;
+  box-shadow: 0 0 20px #ff4444;
+}
+
+.reset-control {
+  margin-top: 30px;
+  padding: 0vw 20vw;
+  display: flex;
+  justify-content: start;
+}
+
+.reset-button {
+  background-color: rgba(0, 0, 0, 0.477);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 30px;
+  font-size: large;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background-color: rgba(39, 39, 39, 0.477);
+  border: 2px solid #fb00fb;
+  margin: -2px;
+}
+
+.audio:hover {
+  cursor: pointer;
 }

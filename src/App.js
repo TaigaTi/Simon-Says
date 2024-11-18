@@ -55,7 +55,7 @@ function App() {
     const audio2 = new Audio('tile2.mp3');
     const audio3 = new Audio('tile3.mp3');
     const audio4 = new Audio('tile4.mp3');
-    
+
     switch (tile) {
       default:
         return;
@@ -74,15 +74,6 @@ function App() {
     }
   };
 
-  const hideInstructions = useCallback(() => {
-    let instructions = document.getElementById("instructions");
-    instructions.classList.remove("instructions-active");
-    instructions.classList.add("instructions-inactive");
-
-    setGameOver(false);
-    playAgain();
-  }, []);
-
   const handleClick = (tile) => {
     playSound(tile);
     addUserSequence(tile);
@@ -96,6 +87,15 @@ function App() {
     resetGame();
   }, [resetGame]);
 
+  const hideInstructions = useCallback(() => {
+    let instructions = document.getElementById("instructions");
+    instructions.classList.remove("instructions-active");
+    instructions.classList.add("instructions-inactive");
+
+    setGameOver(false);
+    playAgain();
+  }, [playAgain, setGameOver]);
+
   useEffect(() => {
     let currentTile = userSequence.length - 1;
 
@@ -105,7 +105,7 @@ function App() {
       gameOver.classList.add("game-over-active");
       gameOver.classList.remove("game-over-inactive");
       setGameOver(true);
-    
+
     } else if (userSequence.length === sequence.length && sequence.length > 0) {
       setScore((prevScore) => prevScore + 1);
     }

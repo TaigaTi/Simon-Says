@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Simon-Says/static/css/main.9ae07904.css",
+    "main.css": "/Simon-Says/static/css/main.4c3ae6fa.css",
     "main.js": "/Simon-Says/static/js/main.ea4363d1.js",
     "static/js/453.f596d7b4.chunk.js": "/Simon-Says/static/js/453.f596d7b4.chunk.js",
     "static/media/background.png": "/Simon-Says/static/media/background.4f18aa1bfae39276ef44.png",
     "index.html": "/Simon-Says/index.html",
-    "main.9ae07904.css.map": "/Simon-Says/static/css/main.9ae07904.css.map",
+    "main.4c3ae6fa.css.map": "/Simon-Says/static/css/main.4c3ae6fa.css.map",
     "main.ea4363d1.js.map": "/Simon-Says/static/js/main.ea4363d1.js.map",
     "453.f596d7b4.chunk.js.map": "/Simon-Says/static/js/453.f596d7b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ae07904.css",
+    "static/css/main.4c3ae6fa.css",
     "static/js/main.ea4363d1.js"
   ]
 }

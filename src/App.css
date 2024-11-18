@@ -20,7 +20,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("../../simon-says/public/background.png");
+  background-image: url("/public/background.png");
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -89,8 +89,8 @@
 }
 
 #tile-1:hover, .tile-1-active {
-  background: #ff72ff;
-  box-shadow: 0 0 20px #ff72ff;
+  background: #ffabff;
+  box-shadow: 0 0 20px #ffabff;
 }
 
 #tile-2 {
@@ -98,8 +98,8 @@
 }
 
 #tile-2:hover, .tile-2-active {
-  background: #58ffff;
-  box-shadow: 0 0 20px #58ffff;
+  background: #a8ffff;
+  box-shadow: 0 0 20px #a8ffff;
 }
 
 #tile-3 {
@@ -107,8 +107,8 @@
 }
 
 #tile-3:hover, .tile-3-active {
-  background: #ccff8a;
-  box-shadow: 0 0 20px #ccff8a;
+  background: #daffa9;
+  box-shadow: 0 0 20px #daffa9;
 }
 
 #tile-4 {
@@ -116,8 +116,8 @@
 }
 
 #tile-4:hover, .tile-4-active {
-  background: #fc5a5a;
-  box-shadow: 0 0 20px #ff4444;
+  background: #ffbaba;
+  box-shadow: 0 0 20px #ffbaba;
 }
 
 .reset-control {

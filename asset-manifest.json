@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/simon-says/static/css/main.b687ecf9.css",
-    "main.js": "/simon-says/static/js/main.35280ac6.js",
-    "static/js/453.f596d7b4.chunk.js": "/simon-says/static/js/453.f596d7b4.chunk.js",
-    "static/media/background.png": "/simon-says/static/media/background.4f18aa1bfae39276ef44.png",
-    "index.html": "/simon-says/index.html",
-    "main.b687ecf9.css.map": "/simon-says/static/css/main.b687ecf9.css.map",
-    "main.35280ac6.js.map": "/simon-says/static/js/main.35280ac6.js.map",
-    "453.f596d7b4.chunk.js.map": "/simon-says/static/js/453.f596d7b4.chunk.js.map"
+    "main.css": "/Simon-Says/static/css/main.618f8513.css",
+    "main.js": "/Simon-Says/static/js/main.930ac06a.js",
+    "static/js/453.f596d7b4.chunk.js": "/Simon-Says/static/js/453.f596d7b4.chunk.js",
+    "static/media/background.png": "/Simon-Says/static/media/background.4f18aa1bfae39276ef44.png",
+    "index.html": "/Simon-Says/index.html",
+    "main.618f8513.css.map": "/Simon-Says/static/css/main.618f8513.css.map",
+    "main.930ac06a.js.map": "/Simon-Says/static/js/main.930ac06a.js.map",
+    "453.f596d7b4.chunk.js.map": "/Simon-Says/static/js/453.f596d7b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b687ecf9.css",
-    "static/js/main.35280ac6.js"
+    "static/css/main.618f8513.css",
+    "static/js/main.930ac06a.js"
   ]
 }

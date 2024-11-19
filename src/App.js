@@ -23,7 +23,7 @@ function App() {
     sequence.forEach((tile, index) => {
       let currentTile = document.getElementById(tile);
 
-      const delay = index * 500;
+      const delay = index * 600;
 
       setTimeout(() => {
         currentTile.classList.add(tile + "-active");
@@ -32,7 +32,7 @@ function App() {
 
       setTimeout(() => {
         currentTile.classList.remove(tile + "-active");
-      }, delay + 800);
+      }, delay + 600);
     });
   }, [sequence]);
 

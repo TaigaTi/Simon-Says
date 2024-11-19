@@ -95,6 +95,12 @@
   cursor: pointer;
 }
 
+.audio-button {
+  background: none;
+  border: none;
+  color: white;
+}
+
 .game-over {
   position: absolute;
   left: 0;

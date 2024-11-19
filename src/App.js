@@ -1,6 +1,6 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import { useCallback, useEffect, useState } from 'react';
 
 const tiles = ["tile-1", "tile-2", "tile-3", "tile-4"]
@@ -11,6 +11,7 @@ function App() {
   const [userPlayed, setUserPlayed] = useState(true);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
+  const [muted, setMuted] = useState(false);
 
   const addColor = useCallback(() => {
     const randomIndex = Math.floor(Math.random() * tiles.length);
@@ -27,14 +28,16 @@ function App() {
 
       setTimeout(() => {
         currentTile.classList.add(tile + "-active");
-        playSound(tile);
+        if (!muted) {
+          playSound(tile);
+        }
       }, delay);
 
       setTimeout(() => {
         currentTile.classList.remove(tile + "-active");
       }, delay + 600);
     });
-  }, [sequence]);
+  }, [sequence, muted]);
 
   const addUserSequence = (tile) => {
     setUserSequence((prevSequence) => [...prevSequence, tile]);
@@ -75,7 +78,9 @@ function App() {
   };
 
   const handleClick = (tile) => {
-    playSound(tile);
+    if (!muted) {
+      playSound(tile);
+    }
     addUserSequence(tile);
   }
 
@@ -137,9 +142,12 @@ function App() {
 
         <div className="controls">
           <p className="score">Score: {score}</p>
-          <p className="audio">
-            <FontAwesomeIcon icon={faVolumeMute} size="2x" />
-          </p>
+          <button className='audio-button' onClick={() => setMuted(!muted)} id='audio'>
+            <p className="audio">
+              {muted ? <FontAwesomeIcon icon={faVolumeUp} size="2x" />
+                : <FontAwesomeIcon icon={faVolumeMute} size="2x" />}
+            </p>
+          </button>
         </div>
 
         <div className="board">

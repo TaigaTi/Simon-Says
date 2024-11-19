@@ -178,7 +178,7 @@
   display: none;
 }
 
-@media screen and (hover: hover) {
+@media screen and (hover: hover) and (pointer: fine) and (min-width: 600px) {
   .tile {
     width: 12vw;
     height: 12vw;
@@ -239,6 +239,23 @@
   }
 }
 
+@media screen and (hover: hover) and (pointer: fine) and (max-width: 600px) {
+  .tile {
+    width: 30vw;
+    height: 30vw;
+    margin: 0.8vw;
+    border-radius: 15px;
+    border: none;
+  }
+
+  .tile:active {
+    width: 31vw;
+    height: 31vw;
+    margin: -10vw 0.4vw;
+    transition: 0.2s;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .App {
     min-height: 100%;
@@ -296,10 +313,7 @@
     display: flex;
     justify-content: center;
   }
-}
 
-
-@media screen and (hover: none) {
   .tile {
     width: 30vw;
     height: 30vw;
@@ -350,7 +364,7 @@
   }
 
   #tile-4:active,
-  .tile-4-active{
+  .tile-4-active {
     background: #ffbaba;
     box-shadow: 0 0 20px #ffbaba;
   }

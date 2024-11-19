@@ -88,7 +88,8 @@
 }
 
 #tile-1:hover,
-.tile-1-active {
+.tile-1-active,
+.tile-1:active {
   background: #ffabff;
   box-shadow: 0 0 20px #ffabff;
 }
@@ -98,7 +99,8 @@
 }
 
 #tile-2:hover,
-.tile-2-active {
+.tile-2-active,
+.tile-2:active {
   background: #a8ffff;
   box-shadow: 0 0 20px #a8ffff;
 }
@@ -108,7 +110,8 @@
 }
 
 #tile-3:hover,
-.tile-3-active {
+.tile-3-active,
+.tile-3:active {
   background: #daffa9;
   box-shadow: 0 0 20px #daffa9;
 }
@@ -118,7 +121,8 @@
 }
 
 #tile-4:hover,
-.tile-4-active {
+.tile-4-active,
+.tile-4:active {
   background: #ffbaba;
   box-shadow: 0 0 20px #ffbaba;
 }
@@ -291,7 +295,7 @@
     height: 30vw;
   }
 
-  .tile:hover {
+  .tile:active, .tile:hover {
     width: 31vw;
     height: 31vw;
     margin: -10vw 0.4vw;

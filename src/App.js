@@ -77,6 +77,14 @@ function App() {
   const handleClick = (tile) => {
     playSound(tile);
     addUserSequence(tile);
+    
+    const currentTile = document.getElementById(tile);
+
+    currentTile.classList.add(tile + "-active");
+
+    setTimeout(() => {
+      currentTile.classList.remove(tile + "-active");
+    }, 200);
   }
 
   const playAgain = useCallback(() => {

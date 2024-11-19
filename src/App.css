@@ -68,65 +68,6 @@
   left: calc(50%);
 }
 
-.tile {
-  width: 12vw;
-  height: 12vw;
-  margin: 0.8vw;
-  border-radius: 15px;
-  border: none;
-}
-
-.tile:hover {
-  width: 12.5vw;
-  height: 12.5vw;
-  margin: 0.3vw 0.5vw;
-  transition: 0.3s;
-}
-
-#tile-1 {
-  background: #fb00fb;
-}
-
-#tile-1:hover,
-.tile-1-active,
-.tile-1:active {
-  background: #ffabff;
-  box-shadow: 0 0 20px #ffabff;
-}
-
-#tile-2 {
-  background: #00f1f1;
-}
-
-#tile-2:hover,
-.tile-2-active,
-.tile-2:active {
-  background: #a8ffff;
-  box-shadow: 0 0 20px #a8ffff;
-}
-
-#tile-3 {
-  background: #b7ff5a;
-}
-
-#tile-3:hover,
-.tile-3-active,
-.tile-3:active {
-  background: #daffa9;
-  box-shadow: 0 0 20px #daffa9;
-}
-
-#tile-4 {
-  background: #ff4444;
-}
-
-#tile-4:hover,
-.tile-4-active,
-.tile-4:active {
-  background: #ffbaba;
-  box-shadow: 0 0 20px #ffbaba;
-}
-
 .reset-control {
   margin-top: 30px;
   padding: 0vw 20vw;
@@ -237,6 +178,67 @@
   display: none;
 }
 
+@media screen and (hover: hover) {
+  .tile {
+    width: 12vw;
+    height: 12vw;
+    margin: 0.8vw;
+    border-radius: 15px;
+    border: none;
+  }
+
+  .tile:hover {
+    width: 12.5vw;
+    height: 12.5vw;
+    margin: 0.3vw 0.5vw;
+    transition: 0.3s;
+  }
+
+  #tile-1 {
+    background: #fb00fb;
+  }
+
+  #tile-1:hover,
+  .tile-1-active,
+  .tile-1:active {
+    background: #ffabff;
+    box-shadow: 0 0 20px #ffabff;
+  }
+
+  #tile-2 {
+    background: #00f1f1;
+  }
+
+  #tile-2:hover,
+  .tile-2-active,
+  .tile-2:active {
+    background: #a8ffff;
+    box-shadow: 0 0 20px #a8ffff;
+  }
+
+  #tile-3 {
+    background: #b7ff5a;
+  }
+
+  #tile-3:hover,
+  .tile-3-active,
+  .tile-3:active {
+    background: #daffa9;
+    box-shadow: 0 0 20px #daffa9;
+  }
+
+  #tile-4 {
+    background: #ff4444;
+  }
+
+  #tile-4:hover,
+  .tile-4-active,
+  .tile-4:active {
+    background: #ffbaba;
+    box-shadow: 0 0 20px #ffbaba;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .App {
     min-height: 100%;
@@ -290,20 +292,66 @@
     top: -2.5px;
   }
 
-  .tile {
-    width: 30vw;
-    height: 30vw;
-  }
-
-  .tile:active, .tile:hover {
-    width: 31vw;
-    height: 31vw;
-    margin: -10vw 0.4vw;
-    transition: 0.3s;
-  }
-
   .reset-control {
     display: flex;
     justify-content: center;
+  }
+}
+
+
+@media screen and (hover: none) {
+  .tile {
+    width: 30vw;
+    height: 30vw;
+    margin: 0.8vw;
+    border-radius: 15px;
+    border: none;
+  }
+
+  .tile:active {
+    width: 31vw;
+    height: 31vw;
+    margin: -10vw 0.4vw;
+    transition: 0.2s;
+  }
+
+  #tile-1 {
+    background: #fb00fb;
+  }
+
+  #tile-1:active,
+  .tile-1-active {
+    background: #ffabff;
+    box-shadow: 0 0 20px #ffabff;
+  }
+
+  #tile-2 {
+    background: #00f1f1;
+  }
+
+  #tile-2:active,
+  .tile-2-active {
+    background: #a8ffff;
+    box-shadow: 0 0 20px #a8ffff;
+  }
+
+  #tile-3 {
+    background: #b7ff5a;
+  }
+
+  #tile-3:active,
+  .tile-3-active {
+    background: #daffa9;
+    box-shadow: 0 0 20px #daffa9;
+  }
+
+  #tile-4 {
+    background: #ff4444;
+  }
+
+  #tile-4:active,
+  .tile-4-active{
+    background: #ffbaba;
+    box-shadow: 0 0 20px #ffbaba;
   }
 }
